@@ -15,7 +15,7 @@
           name: Demo Job Template
           organization: Default
         run_job_template:
-          name: Demo Job Template
+          name: Demo Job Template2
           organization: Default
 #      action:
 #        run_workflow_template:
