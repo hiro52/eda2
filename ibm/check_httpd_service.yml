@@ -1,0 +1,7 @@
+---
+- name: Check httpd service after instance type changed
+  hosts: all
+  tasks:
+    - name: check html file
+      ansible.builtin.uri:
+        url: "http://{{ ansible_facts.fqdn }}"
