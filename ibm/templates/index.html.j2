@@ -1,0 +1,11 @@
+---
+- name: Manage instance type
+  hosts: all
+  tasks:
+    - name: change instance type
+      amazon.aws.ec2_instance:
+        access_key: "{{ access_key }}"
+        secret_key: "{{ secret_key }}"
+        instance_ids: i-0401ec866c70535ce
+        instance_type: "{{ type }}"
+        region: ap-southeast-2
