@@ -16,7 +16,7 @@
 #          organization: Default
       action:
         run_workflow_template:
-          name: WF_Test
+          name: wf
           organization: Default
 #          job_args:
 #            extra_vars:
