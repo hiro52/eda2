@@ -10,14 +10,17 @@
   rules:
     - name: Say Hello
       condition: event.payload.message == "test"
-#      action:
-#        run_job_template:
-#          name: Demo Job Template
-#          organization: Default
       action:
-        run_workflow_template:
-          name: wf
+        run_job_template:
+          name: Demo Job Template
           organization: Default
+        run_job_template:
+          name: Demo Job Template
+          organization: Default
+#      action:
+#        run_workflow_template:
+#          name: wf
+#          organization: Default
 #          job_args:
 #            extra_vars:
 #              instance_type: "value"
