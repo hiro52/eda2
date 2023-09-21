@@ -10,7 +10,7 @@
   rules:
     - name: Say Hello
       condition: event.payload.message == "test"
-      action:
+      actions:
         run_job_template:
           name: Demo Job Template
           organization: Default
