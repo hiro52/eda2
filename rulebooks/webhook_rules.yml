@@ -1,0 +1,26 @@
+---
+- name: Hello Events
+  hosts: all
+
+  sources:
+    - ansible.eda.webhook:
+        host: 0.0.0.0
+        port: 5000
+
+  rules:
+    - name: Say Hello
+      condition: event.payload.message == "test"
+#      action:
+#        run_job_template:
+#          name: resize
+#          organization: Default
+      action:
+        run_job_template:
+          name: resize
+#          name: resize_ec2_test
+          organization: Default
+          job_args:
+            extra_vars:
+              instance_type: "value"
+#        debug:
+#          msg: "Rule fired successfully"
