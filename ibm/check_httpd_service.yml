@@ -5,3 +5,8 @@
     - name: check html file
       ansible.builtin.uri:
         url: "http://{{ ansible_facts.fqdn }}"
+      register: result
+
+    - name: display status code
+      ansible.builtin.debug:
+        msg: Web Server Status is "{{ result.status }}"!!
