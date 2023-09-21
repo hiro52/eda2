@@ -10,17 +10,12 @@
   rules:
     - name: Say Hello
       condition: event.payload.message == "test"
-#      action:
-#        run_job_template:
-#          name: resize
-#          organization: Default
       action:
         run_job_template:
-          name: resize
-#          name: resize_ec2_test
+          name: Demo Job Template
           organization: Default
-          job_args:
-            extra_vars:
-              instance_type: "value"
+#          job_args:
+#            extra_vars:
+#              instance_type: "value"
 #        debug:
 #          msg: "Rule fired successfully"
