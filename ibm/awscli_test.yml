@@ -1,0 +1,7 @@
+---
+- name: Manage instance type by aws command
+  hosts: all
+  tasks:
+    - name: execute aws command for change instance type
+      ansible.builtin.command:
+        cmd: aws ec2 modify-instance-attribute --region ap-southeast-2 --instance-id xxxxxx --instance-type t2.micro
