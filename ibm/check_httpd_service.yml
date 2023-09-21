@@ -9,4 +9,4 @@
 
     - name: display status code
       ansible.builtin.debug:
-        msg: Web Server Status is "{{ result.status }}"!!
+        msg: "Web Server Status is {{ result.status }}!!"
